@@ -10,6 +10,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: Arial, sans-serif;
   /* flex-grow: 1; */
 }
 
@@ -19,30 +20,33 @@ main,
 aside,
 footer {
   padding: 20px;
+  color: white;
 }
 
 header {
-  background-color: tomato;
+  background-color: #d9534f;
   height: 60px;
 }
 
 nav {
-  background-color: cadetblue;
+  background-color: #5bc0de;
+  width: 100px;
   flex-shrink: 0;
 }
 
 main {
-  background-color: goldenrod;
+  background-color: #f0ad4e;
   flex-grow: 1;
 }
 
 aside {
-  background-color: darkgreen;
+  background-color: #5cb85c;
   flex-shrink: 0;
+  width: 100px;
 }
 
 footer {
-  background-color: gray;
+  background-color: #555;
   height: 100px;
 }
 
@@ -53,4 +57,15 @@ footer {
 
 p {
   margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+
+  nav,
+  aside {
+    width: 100%;
+  }
 }
