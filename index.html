@@ -10,7 +10,23 @@
     <header>Header</header>
     <div class="columns">
       <nav>Nav</nav>
-      <main>Main</main>
+      <main>
+        Main
+        <p>
+          Adding min-height to 100vh to container of page's contents. This helps
+          make footer stick to the botton even if there is not enough content to
+          fill the page.
+        </p>
+        <p>
+          As header and footer are fixed size, the columns class fills the
+          remaining height using flex-grow: 1
+        </p>
+        <p>
+          Flexible width for main is done using flex grow to fill any horizontal
+          space available. Nav and aside have flex shrink to 0 to make sure they
+          dont shrink if main has a lot of content.
+        </p>
+      </main>
       <aside>Aside</aside>
     </div>
     <footer>Footer</footer>

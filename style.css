@@ -1,13 +1,16 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-size: 18px;
 }
 
 body {
   text-align: center;
-  display: grid;
-  grid-template-rows: 60px 1fr 100px;
+  font-weight: bold;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1; */
 }
 
 header,
@@ -20,25 +23,34 @@ footer {
 
 header {
   background-color: tomato;
+  height: 60px;
 }
 
 nav {
   background-color: cadetblue;
+  flex-shrink: 0;
 }
 
 main {
   background-color: goldenrod;
+  flex-grow: 1;
 }
 
 aside {
   background-color: darkgreen;
+  flex-shrink: 0;
 }
 
 footer {
   background-color: gray;
+  height: 100px;
 }
 
 .columns {
-  display: grid;
-  grid-template-columns: 100px auto 100px;
+  display: flex;
+  flex-grow: 1;
+}
+
+p {
+  margin: 5px;
 }
